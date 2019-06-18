@@ -13,6 +13,7 @@ class Node {
         random = _random;
     }
 };
+https://leetcode.com/problems/copy-list-with-random-pointer/
 */
 class copy-list-with-random-pointer {
     // tc -> n, sc-> n
