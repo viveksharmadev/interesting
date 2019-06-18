@@ -1,4 +1,5 @@
 class PlusOne {
+    // tc -> n, sc-> 1
     public int[] plusOne(int[] digits) {
         int add = 1;
         List<Integer> list = new ArrayList<>();
