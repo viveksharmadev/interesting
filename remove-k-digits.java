@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/remove-k-digits/submissions/
+// https://leetcode.com/problems/remove-k-digits/
 class remove-k-digits {
     /// tc -> n, sc - > n
     public String removeKdigits(String num, int k) {
