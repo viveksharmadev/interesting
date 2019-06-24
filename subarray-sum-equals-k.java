@@ -1,5 +1,22 @@
 //https://leetcode.com/problems/subarray-sum-equals-k/
 class subarray-sum-equals-k {
+    
+     // tc -> n^2, sc-> 1
+    public int subarraySum(int[] nums, int k) {
+        int count = 0,  n = nums.length;
+        for(int i=0; i<n; i++){
+            int sum = 0;
+            for(int j=i; j<n; j++){
+                sum += nums[j];
+                if(sum==k){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+    
+    // Better
     // tc -> n, sc-> n
     public int subarraySum(int[] nums, int k) {
         int sum = 0, res = 0;
