@@ -12,6 +12,6 @@ class unique-paths {
         int res = getUniquePaths(m-1, n, cache)
                 + getUniquePaths(m, n-1, cache);
         cache[m][n] = res;
-        return res;
+        return cache[m][n];
     }
 }
