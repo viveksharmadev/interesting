@@ -12,7 +12,8 @@
 class subtree-of-another-tree {
     // tc -> m*n , sc->  n (The depth of the recursion tree can go upto n. n refers to the number of nodes in s)
     public boolean isSubtree(TreeNode s, TreeNode t) {
-        if(s==null) return false;
+        if(s==null && t==null) return true;
+        if(s==null || t==null) return false;
         if(isSametree(s,t)) return true;
         return isSubtree(s.left, t) || isSubtree(s.right, t);
     }
