@@ -16,9 +16,10 @@
  *     public void clean();
  * }
  */
-//tc -> 4^n (I am not sure I think the same because everytime we backtrack all the 4 directions)
-    // tc -> in dsicussion some says Order of n because Set makes sure that each room is visited once //however I am not sure
-    //sc - N because of set 
+ /*Time complexity : O(4^N−M), where N is a number of cells in the room and M is a number of obstacles, because for each cell the algorithm checks 4 directions.
+
+Space complexity : O(N−M), where N is a number of cells in the room and M is a number of obstacles, to track visited cells
+*/
 class robot-room-cleaner {
     // Make sure dirs are aligned to logic
     int[][] dirs = {{0,1}, {1,0},{0,-1},{-1,0}};
