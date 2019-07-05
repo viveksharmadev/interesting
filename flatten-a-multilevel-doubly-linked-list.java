@@ -43,4 +43,25 @@ class Solution {
         }        
         return head;
     }
+    
+    // Same code at different time
+     // tc -> n, sc-> n
+    public Node flatten(Node head) {
+        Stack<Node> stack = new Stack<>();
+        Node curr = head;
+        while(curr!=null){
+            if(curr.child!=null){
+                stack.push(curr.next); 
+                curr.next = curr.child;
+                curr.child.prev = curr;
+                curr.child = null;                
+            }else if(!stack.isEmpty() && curr.next==null){
+                    Node node = stack.pop();
+                    curr.next = node;
+                    if(node!=null) node.prev = curr;
+            }
+            curr = curr.next;
+        }
+        return head;
+    }
 }
