@@ -44,7 +44,7 @@ class Solution {
         return head;
     }
     
-    // Same code at different time
+    // Same code just another view:
      // tc -> n, sc-> n
     public Node flatten(Node head) {
         Stack<Node> stack = new Stack<>();
