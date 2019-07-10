@@ -17,6 +17,7 @@
 
 
 class next-greater-element-iii {
+	// tc -> n, sc-> n
     public int nextGreaterElement(int num) {
         List<Integer> nums = new ArrayList<>();
         while(num>0){
