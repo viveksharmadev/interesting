@@ -36,6 +36,20 @@ class longest-substring-without-repeating-characters {
            }
        }
        return maxLength;
-   }
+   }   
+   
+    // tc -> n, sc-> n
+    public int lengthOfLongestSubstring(String s) {
+        Map<Character, Integer> indxMap = new HashMap<>();
+        int i=0, j=0, maxLength = 0;
+        while(i<s.length()){
+            if(indxMap.containsKey(s.charAt(i))){
+                j = Math.max(j, indxMap.get(s.charAt(i))+1);
+            }
+            indxMap.put(s.charAt(i), i++);
+            maxLength = Math.max(maxLength, i-j);
+        }
+        return maxLength;
+    }
 
 }
