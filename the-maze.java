@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/the-maze/
 
 class the-maze {
+    // tc -> m*n, sc-> m*n
     public boolean hasPath(int[][] maze, int[] start, int[] destination) {
         // Ball will not stop -> DFS
         // After hitting the wall, ball can go to any of four directions -> BFS
