@@ -10,7 +10,7 @@
  * }
  */
 class vertical-order-traversal-of-a-binary-tree {
-    // tc -> n, sc-> n
+    // tc -> nlogn, sc-> n
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if(root==null) return res;
