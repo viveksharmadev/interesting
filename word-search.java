@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/word-search/
 class word-search {
-    // tc -> m*n, sc-> m*n
+    // tc -> m*n*4^L, sc-> m*n
     public boolean exist(char[][] board, String word) {
         for(int i=0; i<board.length; i++){
             for(int j=0; j<board[0].length; j++){
