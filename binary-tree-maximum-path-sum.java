@@ -23,4 +23,19 @@ class binary-tree-maximum-path-sum {
         max = Math.max(max, left+right+node.val);
         return Math.max(left, right) + node.val;
     }
+    
+    // Easier to understand
+     private int calculateMaxPathSum(TreeNode node){
+        if(node==null) return 0;
+        int left = calculateMaxPathSum(node.left);
+        int right = calculateMaxPathSum(node.right);
+        if(left<0){
+            max = Math.max(max, Math.max(node.val, node.val + right));
+        }else if(right < 0){
+            max = Math.max(max, Math.max(node.val, node.val + left));
+        }else{
+            max = Math.max(max, left+node.val+right);
+        }
+        return Math.max(node.val, Math.max(node.val+left, node.val+right));
+    }
 }
