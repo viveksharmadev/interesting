@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/search-a-2d-matrix/
 class search-a-2d-matrix {
-    //tc-> logmn, sc-> 1
+    //tc-> mlogn, sc-> 1
     public boolean searchMatrix(int[][] matrix, int target) {
         for(int[] m : matrix){
             if(doesExist(m, target)) return true;
