@@ -41,4 +41,20 @@ class minimum-add-to-make-parentheses-valid {
         }
         return count + stk;
     }
+    
+    // Simpler, I guess:
+    // tc -> n, sc-> 1
+    public int minAddToMakeValid(String S) {
+        int open = 0, close=0;
+        for(int i=0; i<S.length(); i++){
+            if(S.charAt(i)=='('){
+                open++;
+            }else if(S.charAt(i)==')' && open>0){                
+                open--;
+            }else{                
+                close++;
+            }
+        }
+        return open+close;
+    }
 }
