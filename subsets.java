@@ -16,4 +16,21 @@ class subsets {
             list.remove(list.size()-1);
         }        
     }
+    
+    // tc -> n*2^n, sc-> n*2^n
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        res.add(new ArrayList<>());
+        
+        for(int num : nums){
+            int n = res.size();
+            for(int i=0; i<n; i++){
+                List<Integer> list = new ArrayList(res.get(i));
+                list.add(num);
+                res.add(list);
+            }
+        }
+        
+        return res;
+    }
 }
