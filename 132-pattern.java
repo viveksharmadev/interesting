@@ -27,4 +27,22 @@ class Solution {
             }
         return false;
     }
+    
+    // tc -> n, sc-> n
+    public boolean find132pattern(int[] nums) {
+        Stack<Integer> stack = new Stack<>();
+        int n = nums.length;
+        int s2 = Integer.MIN_VALUE;
+        for(int i=n-1; i>=0; i--){
+            if(nums[i] < s2){
+                return true;
+            }else{
+                while(!stack.isEmpty() && stack.peek() < nums[i]){
+                    s2 = stack.pop();
+                }
+                stack.push(nums[i]);
+            }
+        }
+        return false;
+    }
 }
